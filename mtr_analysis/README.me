@@ -1,0 +1,43 @@
+# MTR Network Analysis Script on Mac
+
+This script is an improved version that integrates three previously separate network monitoring configurations developed during my time at WeWork. It serves as a comprehensive tool for network analysis using MTR (My TraceRoute).:
+
+1. Real-time network view
+2. 1000 packet report
+3. TCP 443 traffic analysis
+
+## Prerequisites
+
+- MTR installed on your system via the command brew install mtr https://www.exavault.com/docs/mtr
+- Sudo privileges
+
+## Usage
+
+1. Clone this repository or download the script.
+2. Go to the script directory path and make the script executable:
+   ```
+   chmod +x mtr_analysis.sh
+   ```
+3. Run the script:
+   ```
+   ./mtr_analysis.sh
+   ```
+4. Choose an option from the menu.
+
+## Features
+
+- **Real-time view**: Continuous updates on network performance to 1.1.1.1 (Cloudflare DNS).
+- **1000 packet report**: Comprehensive overview of network performance over 1000 packets to 8.8.8.8 (Google DNS).
+- **TCP 443 traffic analysis**: Specific analysis of HTTPS traffic to dns.google.com.
+
+## Output
+
+- Real-time view is displayed in the terminal.
+- Reports are saved to your Desktop as text files.
+
+## Customization
+
+You can modify the, MTR version, desired path with your username, target IP addresses, packet counts, or output fields by editing the script.
+
+MTR_PATH="/usr/local/Cellar/mtr/YOUR_DOWNLOADED_VERSION/sbin/mtr"
+>> /Users/Your_Computer_Username/Desktop/tcp_mtr_report.txt
